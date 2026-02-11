@@ -376,7 +376,7 @@ class IISMonitor:
 
     def _check_cycle(self):
         current_time = datetime.now().strftime("%H:%M:%S")
-        
+        self.status.total_checks += 1
         # 检查网站
         for name, cfg in self.config_manager.websites.items():
             if not cfg.enabled: continue
