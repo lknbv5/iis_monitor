@@ -1,0 +1,20 @@
+{
+  "websites": {
+    "arrow": {
+      "url": "http://localhost:8001",
+      "enabled": true,
+      "check_timeout": 15,
+      "expected_status": 200
+    }
+  },
+  "app_pools": {
+    "arrow": {
+      "enabled": true,
+      "auto_restart": true,
+      "restart_delay": 5
+    }
+  },
+  "check_interval": 10,
+  "max_failures": 2,
+  "global_auto_restart": true
+}
