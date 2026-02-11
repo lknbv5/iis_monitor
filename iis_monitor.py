@@ -857,13 +857,13 @@ with gr.Blocks(title="IIS Monitor") as demo:
                     txt_web_conf = gr.Textbox(label="JSON配置", lines=8, placeholder="""{
 	"Example Web Site": {
 		"url": "http://localhost:80",
-		"enabled": True,
+		"enabled": true,
 		"check_timeout": 10,
 		"expected_status": 200
 	},
 	"ExampleWebsite": {
 		"url": "http://localhost:8080",
-		"enabled": True,
+		"enabled": true,
 		"check_timeout": 15,
 		"expected_status": 200
 	}
@@ -879,13 +879,13 @@ with gr.Blocks(title="IIS Monitor") as demo:
                     gr.Markdown("### 2. 应用池监控配置")
                     txt_pool_conf = gr.Textbox(label="JSON配置", lines=8, placeholder="""{
 	"ExampleAppPool": {
-		"enabled": True,
-		"auto_restart": True,
+		"enabled": true,
+		"auto_restart": true,
 		"restart_delay": 5
 	},
 	"MyExampleAppPool": {
-		"enabled": True,
-		"auto_restart": True,
+		"enabled": true,
+		"auto_restart": true,
 		"restart_delay": 10
 	}
 }""")
@@ -981,13 +981,13 @@ with gr.Blocks(title="IIS Monitor") as demo:
                 # web_final = {
                 #     "Example Web Site": {
                 #         "url": "http://localhost:80",
-                #         "enabled": True,
+                #         "enabled": true,
                 #         "check_timeout": 10,
                 #         "expected_status": 200
                 #     },
                 #     "ExampleWebsite": {
                 #         "url": "http://localhost:8080",
-                #         "enabled": True,
+                #         "enabled": true,
                 #         "check_timeout": 15,
                 #         "expected_status": 200
                 #     }
@@ -1001,13 +1001,13 @@ with gr.Blocks(title="IIS Monitor") as demo:
             if len(pool_final)==0:
                 # pool_final = {
                 #     "ExampleAppPool": {
-                #         "enabled": True,
-                #         "auto_restart": True,
+                #         "enabled": true,
+                #         "auto_restart": true,
                 #         "restart_delay": 5
                 #     },
                 #     "MyExampleAppPool": {
-                #         "enabled": True,
-                #         "auto_restart": True,
+                #         "enabled": true,
+                #         "auto_restart": true,
                 #         "restart_delay": 10
                 #     }
                 # }

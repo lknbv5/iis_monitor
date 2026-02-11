@@ -62,7 +62,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ManagementService
 **必须以管理员身份运行**脚本，否则无法对 IIS 进行启停操作。
 
 1. 在开始菜单搜索 `cmd` 或 `python`。
+
 2. 右键点击，选择 **"以管理员身份运行"**。
+
 3. 切换到项目目录，运行：
    
    ```bash
@@ -89,20 +91,22 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ManagementService
 ### 配置页面
 
 1. 点击 **"🔄 刷新网站列表"** 按钮。系统会列出当前 IIS 中所有的网站及其状态（例如：🟢 Default Web Site - [运行中]）。
+
 2. 根据列表中的名称，编辑下方的 JSON 配置。
+
 3. JSON 配置格式示例：
    
    ```json
    {
    "Example Web Site": {
        "url": "http://localhost:80",
-       "enabled": True,
+       "enabled": true,
        "check_timeout": 10,
        "expected_status": 200
    },
    "ExampleWebsite": {
        "url": "http://localhost:8080",
-       "enabled": True,
+       "enabled": true,
        "check_timeout": 15,
        "expected_status": 200
    }
@@ -112,17 +116,18 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ManagementService
    ```json
    {
    "ExampleAppPool": {
-       "enabled": True,
-       "auto_restart": True,
+       "enabled": true,
+       "auto_restart": true,
        "restart_delay": 5
    },
    "MyExampleAppPool": {
-       "enabled": True,
-       "auto_restart": True,
+       "enabled": true,
+       "auto_restart": true,
        "restart_delay": 10
    }
    }
    ```
+
 4. 点击 **"💾 保存网站配置"** 生效。
 
 ---
@@ -168,5 +173,3 @@ MIT License
 ---
 
 **注意**：本工具仅用于服务器运维管理，请妥善保管管理员权限，避免在公网环境直接暴露管理端口。
-
-
